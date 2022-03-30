@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--light-cyan);
+    background-color: var(--dark-blue);
+    display: grid;
+    place-items: center;
+    place-content: center;
+    font-family: 'Manrope', sans-serif;
+}
+
+.centervh {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.attribution a {
+    color: var(--neon-green);
+}
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    
+    background-color: var(--dark-grayish-blue);
+    border-radius: 20px;
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 2.5em;
+    padding: 40px 40px 10px 40px;
+}
+
+.divider {
+    display: block;
+    margin-bottom: 40px;
+}
+
+#advice-id {
+    color: var(--neon-green);
+    font-size: 1em;
+    letter-spacing:0.3em;
+}
+
+#advice {
+    font-size: 28px;
+    color: var(--light-cyan);
+}
+
+#generate-advice {
+    position: absolute;
+    bottom: -25px;
+    background-color: var(--neon-green);
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    border-radius: 50%;
+}
+
+#generate-advice img {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#generate-advice:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 27px -1px rgba(82,255,168,0.61); 
+    box-shadow: 0px 0px 27px -1px rgba(82,255,168,0.61);
+}
+
+@media only screen and (max-width: 620px) {
+    main {
+        width: 400px;
+    }
+    .divider {
+        height: auto;
+        width: 330px;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    main {
+        width: 350px;
+    }
+    .divider {
+        height: auto;
+        width: 270px;
+    }
+    #advice {
+        font-size: 24px;
+    }
+}
